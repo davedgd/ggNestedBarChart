@@ -51,4 +51,4 @@ ggsave("p1.png", width = 20, height = 5)
 (p2 <- ggNestedBarChart(p1))
 ggsave("p2.png", width = 20, height = 5)
 ```
-![ggNestedBarChart Example](p1.png?raw=true "ggNestedBarChart Example")
+![ggNestedBarChart Example](p2.png?raw=true "ggNestedBarChart Example")
