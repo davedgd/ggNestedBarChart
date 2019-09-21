@@ -13,6 +13,7 @@ devtools::install_github("davedgd/ggNestedBarChart")
 ### Usage
 
 ``` r
+library(ggNestedBarChart)
 library(stringr)
 
 # set up data

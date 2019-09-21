@@ -4,10 +4,9 @@ library(gtable)
 library(ggpubr)
 library(dplyr)
 library(purrr)
-library(stringr)
-library(dplyr)
 
 source("R/functions.R")
+library(stringr)
 
 # set up data
 data(mtcars)
