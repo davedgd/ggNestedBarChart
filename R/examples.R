@@ -21,7 +21,7 @@ mtcars <- mtcars %>%
 # create base ggplot2 bar chart with theme tweaks
 p1 <- ggplot(mtcars, aes(x = brand, fill = carb)) +
   geom_bar() +
-  geom_text(aes(label = ..count..),stat = "count", position = position_stack(0.5)) +
+  geom_text(aes(label = ..count..), stat = "count", position = position_stack(0.5)) +
   facet_wrap(vars(am, vs, gear), strip.position = "top", scales = "free_x", nrow = 1) +
   theme_bw(base_size = 15) +
   theme(panel.spacing = unit(0, "lines"),
