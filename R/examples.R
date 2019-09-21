@@ -7,6 +7,8 @@ library(purrr)
 library(stringr)
 library(dplyr)
 
+source("functions.R")
+
 # set up data
 data(mtcars)
 mtcars <- mtcars %>%
