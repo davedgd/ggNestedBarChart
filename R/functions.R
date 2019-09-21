@@ -18,7 +18,7 @@ ggNestedBarChart <- function (p) {
   stripTexts <- grep("strip", gp$layout$name)
 
   # build list of strip labels
-  labels <- lapply(1:3, function (x) map_chr(gp$grobs[stripTexts], ~ .$grobs[[x]]$children[[2]]$children[[1]]$label))
+  labels <- lapply(1:length(gp$grobs[stripTexts][[1]]), function (x) map_chr(gp$grobs[stripTexts], ~ .$grobs[[x]]$children[[2]]$children[[1]]$label))
 
   # find strip label ranges
   nestingRanges <- lapply(1:(length(labels) - 1), function (x) {
