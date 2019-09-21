@@ -7,7 +7,7 @@ library(purrr)
 library(stringr)
 library(dplyr)
 
-source("functions.R")
+source("R/functions.R")
 
 # set up data
 data(mtcars)
