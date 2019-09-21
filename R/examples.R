@@ -28,6 +28,6 @@ p1
 
 ggsave("p1.png", width = 20, height = 5)
 
-(p2 <- ggNestedBar(p1))
+(p2 <- ggNestedBarChart(p1))
 
 ggsave("p2.png", width = 20, height = 5)

@@ -5,7 +5,7 @@ library(ggpubr)
 library(dplyr)
 library(purrr)
 
-ggNestedBar <- function (p) {
+ggNestedBarChart <- function (p) {
 
   gp <- ggplotGrob(p)
 
