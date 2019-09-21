@@ -1,4 +1,11 @@
+library(ggplot2)
+library(grid)
+library(gtable)
+library(ggpubr)
+library(dplyr)
+library(purrr)
 library(stringr)
+library(dplyr)
 
 # set up data
 data(mtcars)
