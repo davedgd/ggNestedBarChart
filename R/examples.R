@@ -1,7 +1,7 @@
 library(stringr)
 
+# set up data
 data(mtcars)
-
 mtcars <- mtcars %>%
   mutate(car = rownames(mtcars),
          vs = recode(vs, "0" = "V-Shaped", "1" = "Straight"),
@@ -10,6 +10,7 @@ mtcars <- mtcars %>%
          carb = paste(carb, "Carbs"),
          brand = str_split(rownames(mtcars), " ") %>% map_chr(., 1))
 
+# create base ggplot2 bar chart with theme tweaks
 p1 <- ggplot(mtcars, aes(x = brand, fill = carb)) +
   geom_bar() +
   geom_text(aes(label = ..count..),stat = "count", position = position_stack(0.5)) +
@@ -24,10 +25,10 @@ p1 <- ggplot(mtcars, aes(x = brand, fill = carb)) +
         panel.border = element_rect(color = "black", fill = NA, size = 0),
         panel.background = element_rect(fill = "white"))
 
+# show/save base ggplot2 bar chart
 p1
-
 ggsave("p1.png", width = 20, height = 5)
 
+# show/save ggNestedBarChart
 (p2 <- ggNestedBarChart(p1))
-
 ggsave("p2.png", width = 20, height = 5)
