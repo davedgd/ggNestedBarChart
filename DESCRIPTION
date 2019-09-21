@@ -1,0 +1,19 @@
+Package: ggNestedBarChart
+Type: Package
+Title: Create Nested, Grouped, Heirarchical Bar Charts with ggplot2
+Version: 0.1.0
+Author: David G. Dobolyi
+Maintainer: David G. Dobolyi <dd2es@virginia.edu>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports:
+    ggplot2,
+    grid,
+    gtable,
+    ggpubr,
+    dplyr,
+    purrr,
+    stringr,
