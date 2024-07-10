@@ -1,3 +1,13 @@
+# Note Regarding Archiving
+This package no longer function as expected with recent changes to ggplot2. As an alternative, please see the [ggh4x](https://teunbrand.github.io/ggh4x/) package, which provides a simpler solution for generating this type of plot via functions like [facet_nested](https://teunbrand.github.io/ggh4x/reference/facet_nested.html). For example, the following code will generate a plot (i.e., `p3`) very similar to the `p2` example shown below:
+
+``` r
+library("ggh4x")
+
+p3 <- p1 + facet_nested(~ am + vs + gear, scales = TRUE, space = TRUE)
+ggsave("p3.png", width = 20, height = 5)
+```
+
 # ggNestedBarChart
 An easier way to create nested, grouped, heirarchical bar charts with ggplot2
 
